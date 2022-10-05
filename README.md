@@ -29,7 +29,7 @@ As input the file SherlockHolmes.txt
 
 In your report also include the run results for k = 10.
 
------------
+*********
 
 - Movie Analysis
 We will analyze an IMDB dataset about movies and draw conclusions that will help the IMDB team make recommendations for
@@ -59,7 +59,7 @@ If the data of a line in the file is not acceptable (eg wrong number of columns)
 The report will also include the execution results for the above queries.
 
 
-----------
+***********
 
 - DNA Sequence
 A DNA sequence consists of the symbols A, G, C, T. For example, below
@@ -82,7 +82,7 @@ Use the ecoli.txt file as input.
 The results that show for each 2-team, 3-team, 4-team the number of appearances will
 must exist in a txt file (eg output.txt)
 
--------
+**********
 
 - Graphs
 A text file where in each line there is a connection between two vertices 
