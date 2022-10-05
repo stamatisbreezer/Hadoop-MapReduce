@@ -26,21 +26,21 @@ public class Movies {
             String str = value.toString();
             String[] tokens = str.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);  // Να χωρισουν στο κομμα εκτος και αν ειναι εντος ""
 
-            //διαχωρισμων των χωρων
+            //separate countries
             tokens[8] = tokens[8].replaceAll("\"", "");
             String[] countries = tokens[8].toUpperCase().split(", ");
 
-            //διαχωρισμων για την κατηγορια των ταινιων
+            //separate movie categories
             tokens[4] = tokens[4].replaceAll("\"", "");
             String[] gentres = tokens[4].toUpperCase().split(", ");
 
             double rating=0;
             int year=0;
-            if (tokens.length == 9) { // Η γραμμη εχει το σωστο αριθμο στηλων
+            if (tokens.length == 9) { // Input line has correct number of collumns
                 try {
                     year = Integer.parseInt(tokens[2]);
                     rating = Double.parseDouble(tokens[6]);
-                    int runtime = Integer.parseInt(tokens[3].replace(" min",""));  //Και η πρωτη γραμμη θα παραλειφθει
+                    int runtime = Integer.parseInt(tokens[3].replace(" min",""));  //Skip Fist line 
                     for (int i=0; i<countries.length; i++){
                         runtimeCount.set(runtime);
                         Country.set(countries[i]);

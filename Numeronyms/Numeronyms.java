@@ -23,10 +23,10 @@ public class Numeronyms {
 
             while (itr.hasMoreTokens()) {
                 String str = itr.nextToken();
-                str = str.toLowerCase().trim().replaceAll("[,*-_=?\'#\"():~!.1234567890]", "");  //Αφαιρεση χαρακτηρων και πεζα
+                str = str.toLowerCase().trim().replaceAll("[,*-_=?\'#\"():~!.1234567890]", "");  //Remove special and numbers
 
-                if (str.length() > 2) {   //Μεταβολη μεγεθους string προς καταγραφη
-                    str = str.substring(0, 1) + String.valueOf(str.length() - 2) + str.substring(str.length() - 1);  //κατασκευη numeronyms
+                if (str.length() > 2) {   //Variable size string to count
+                    str = str.substring(0, 1) + String.valueOf(str.length() - 2) + str.substring(str.length() - 1);  //make numeronyms
                     word.set(str);
                     context.write(word, one);
                 }
